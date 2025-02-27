@@ -1,0 +1,90 @@
+body {
+    font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ที่ดูนุ่มนวล */
+    background-color: #f4efe4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menucontainer {
+    width: 100%;
+    max-width: 1663px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tabmenu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.tabmenu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tabmenu li a:hover {
+    color: #007bff;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.container {
+    background: #f8f5f0;
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    text-align: center;
+    margin-top: 120px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s forwards;
+}
+
+.container p {
+    font-size: 48px; /* ปรับให้ใหญ่ขึ้น */
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px; /* เพิ่มช่องไฟให้ดูโปร่ง */
+}
+
+/* เอฟเฟกต์ Fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="selects.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <div class="menucontainer">
+            <a href="/login ans register/home.html">
+                <img src="/picture/Logo.png" alt="Logo" class="logo">
+            </a>
+            <div class="menu-wrapper">
+                <ul class="tabmenu">
+                    <li><a href="/login ans register/home.html">หน้าหลัก</a></li>
+                    <li><a href="/Menu/menu.html">เมนู</a></li>
+                    <li><a href="/contact/contact.html">ติดต่อเรา</a></li>
+                    <li><a href="/Menu/Timetable.html" class="nav-link">ตารางเวลาช่าง</a></li>
+                </ul>
+                <a href="/user/profile.html">
+                    <div class="user-icon">
+                        <img src="/img/User.svg" alt="User Icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="javascript:history.back()">
+            <img src="/picture/Icon.svg" alt="">
+        </a>
+        
+        
+        <h2>Booking Information</h2>
+        <hr>
+
+        <label for="name">ชื่อ - สกุล</label>
+        <input type="text" id="name" value="user1" >
+
+        <label for="time">เลือกวัน-เวลา</label>
+        <select id="time">
+            <option>09.00 น.</option>
+            <option>10.00 น.</option>
+            <option>11.00 น.</option>
+            <option>12.00 น.</option>
+            <option>13.00 น.</option>
+            <option>14.00 น.</option>
+            <option>15.00 น.</option>
+            <option>16.00 น.</option>
+            <option>17.00 น.</option>
+            <option>18.00 น.</option>
+        </select>
+
+        <label for="service">เลือกช่างให้บริการ</label>
+        <select id="service">
+            <option value="">เลือกช่าง</option>
+            <option value="A">ช่าง JAMS</option>
+            <option value="B">ช่าง PAM</option>
+            <option value="C">ช่าง POND</option>
+            <option value="D">ช่าง SARA</option>
+        </select>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="confirm">
+            <label for="confirm">ยืนยันข้อมูลการจอง</label>
+        </div>
+
+        <button class="confirm-btn">ยืนยันการจอง</button>
+        <button class="cancel-btn " onclick="confirmlogout()">ยกเลิก</button>
+    </div>
+
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-title">ยกเลิก</div>
+            <div class="modal-message">คุณต้องการที่จะยกเลิกใช่ไหม</div>
+            <div class="modal-buttons">
+                <button class="btn btn-cancel">ไม่ใช่</button>
+                <button class="btn btn-confirm">ใช่</button>
+            </div>
+        </div>
+    </div>
+    <script src="script copy 3.js"></script>
+</body>
+</html>

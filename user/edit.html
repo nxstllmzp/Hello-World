@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    
+    <header>
+        <div class="menucontainer">
+            <a href="/login ans register/home.html">
+                <img src="/picture/Logo.png" alt="Logo" class="logo">
+            </a>
+            <div class="menu-wrapper">
+                <ul class="tabmenu">
+                    <li><a href="/login ans register/home.html">หน้าหลัก</a></li>
+                    <li><a href="/Menu/menu.html">เมนู</a></li>
+                    <li><a href="/contact/contact.html">ติดต่อเรา</a></li>
+                    <li><a href="/Menu/Timetable.html" class="nav-link">ตารางเวลาช่าง</a></li>
+                </ul>
+                <a href="/user/profile.html>
+                    <div class="user-icon">
+                        <img src="/img/User.svg" alt="User Icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <p class="name">BEAUTY 2+1</p>
+
+    <div class="boxcontainer">
+        <a href="javascript:history.back()">
+            <img src="/picture/Icon.svg" alt="Back" class="arrow">
+        </a>
+        <h1>บัญชีผู้ใช้</h1>
+        <div class="usercontainer">
+            <div class="inputname">
+                <h4>Name</h4>
+                 <input type="text" placeholder="ชื่อผู้ใช้" >
+               </div>
+
+               <div class="inputname1">
+                <h4>เบอร์โทรศัพท์</h4>
+                 <input type="text"  >
+               </div>
+
+               <div class="inputname2">
+                <h4>Email</h4>
+                 <input type="text"  >
+               </div>
+
+               <div class="edit">
+                <button class="edit-btn" onclick="confirmlogout()">บันทึก</button>
+               </div>
+
+        </div>
+        <div id="logoutModal" class="modal-overlay">
+            <div class="modal">
+                <button class="modal-close">&times;</button>
+                <div class="modal-title">บันทึก</div>
+                <div class="modal-message">ยืนยันที่จะบันทึกการเปลี่ยนแปลง</div>
+                <div class="modal-buttons">
+                    <button class="btn btn-cancel">ไม่ใช่</button>
+                    <button class="btn btn-confirm">ใช่</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="jave.js"></script>
+</html>

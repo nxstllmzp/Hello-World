@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty 2+1 - บัญชีผู้ใช้</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="menucontainer">
+            <a href="/login ans register/home.html">
+                <img src="/picture/Logo.png" alt="Logo" class="logo">
+            </a>
+            <div class="menu-wrapper">
+                <ul class="tabmenu">
+                    <li><a href="/login ans register/home.html">หน้าหลัก</a></li>
+                    <li><a href="/Menu/menu.html">เมนู</a></li>
+                    <li><a href="/contact/contact.html">ติดต่อเรา</a></li>
+                    <li><a href="/Menu/Timetable.html" class="nav-link">ตารางเวลาช่าง</a></li>
+                </ul>
+                <a href="/user/profile.html">
+                    <div class="user-icon">
+                        <img src="/img/User.svg" alt="User Icon">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <p class="name">BEAUTY 2+1</p>
+
+    <div class="boxcontainer">
+        <a href="javascript:history.back()">
+            <img src="/picture/Icon.svg" alt="Back" class="arrow">
+        </a>
+        <div class="usercontainer">
+            <p class="title">บัญชีผู้ใช้</p>
+            <hr>
+            <div class="user-info" onclick="window.location.href='/user/userinfo.html'">
+                <h2>ชื่อผู้ใช้ : <br> น้องมิ้นต์ เด็กเก้า</h2>
+            </div>
+            <hr>
+            <div class="user-info">
+                <h2>ประวัติการใช้บริการ</h2>
+            </div>
+
+            <button class="logout-btn" onclick="confirmlogout()">ออกจากระบบ</button>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-title">ออกจากระบบ</div>
+            <div class="modal-message">คุณต้องการที่จะออกจากระบบใช่หรือไม่</div>
+            <div class="modal-buttons">
+                <button class="btn btn-cancel">ไม่ใช่</button>
+                <button class="btn btn-confirm">ใช่</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="logout.js"></script>
+
+</body>
+</html>
