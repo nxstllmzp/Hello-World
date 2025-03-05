@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คืนเงินค่ามัดจำ</title>
+    <link rel="stylesheet" href="/syle.css/คืนเงิน.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav>
+            <div class="logobrand">
+              <a href="/login ans register/home.html"><img src="/img/Black Minimalist Beauty Makeup Studio Logo 4 (1).svg" alt="Beauty 2+1"></a>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="tabmenu">
+                  <li></li>
+                <li><a href="/login ans register/home.html" class="nav-link">หน้าหลัก</a></li>
+                <li><a href="/Menu/menu.html" class="nav-link">เมนู</a></li>
+                <li><a href="/contact/contact.html" class="nav-link">ติดต่อเรา</a></li>
+                <li><a href="/Menu/Timetable.html" class="nav-link">ตารางเวลาช่าง</a></li>
+              </ul>
+              <div class="logo">
+                  <a href="/login ans register/home.html" class="logo">
+                      <img src="/img/User.svg" alt="Logo">
+                  </a>
+              </div>
+            </div>
+          </nav>
+        </div>  
+    </header>
+
+    <div class="main-content">
+        <div class="bgcontainer">
+            <div class="text-header">
+                <h1>คืนเงินค่ามัดจำ</h1>      
+            </div>
+            <hr class="queue-divider">
+            <div class="text-content">
+                <label for="bank">เลือกธนาคาร</label>
+                <select id="bank" name="bank">
+                    <option value="" disabled selected>เลือกธนาคาร</option>
+                    <option value="kbank">กสิกรไทย</option>
+                    <option value="scb">ไทยพาณิชย์</option>
+                    <option value="bbl">กรุงเทพ</option>
+                    <option value="ktb">กรุงไทย</option>
+                </select>
+
+                <label for="account">หมายเลขบัญชี</label>
+                <input type="text" id="account" name="account" placeholder="กรอกหมายเลขบัญชี">
+
+                <label for="delivery-note">Delivery note</label>
+                <textarea id="delivery-note" rows="4" cols="50" placeholder="กรอกข้อมูล"></textarea>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" id="confirm-checkbox">
+                    <span class="checkmark"></span>
+                    The information is correct.
+                </label>
+            </div>
+
+            <div class="button-container">
+                <button class="en-btn" type="button" onclick="validateForm()">ยืนยัน</button>
+                <a href="/draftseucces/cancel.html"><button class="cancel-btn" type="button">ยกเลิก</button></a>
+            </div>   
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            let bank = document.getElementById("bank").value;
+            let account = document.getElementById("account").value.trim();
+            let deliveryNote = document.getElementById("delivery-note").value.trim();
+            let checkbox = document.getElementById("confirm-checkbox");
+
+            if (bank === "" || account === "" || deliveryNote === "" || !checkbox.checked) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'โปรดตรวจสอบข้อมูล',
+                    text: 'กรุณากรอกข้อมูลให้ครบทุกช่องและติ๊กถูก!',
+                });
+                return;
+            }
+
+            // ถ้าข้อมูลครบถ้วน เปลี่ยนเส้นทางไปหน้า "รอการคืนเงิน"
+            window.location.href = "/คืนเงิน/รอการคืนเงิน.html";
+        }
+    </script>
+
+</body>
+</html>

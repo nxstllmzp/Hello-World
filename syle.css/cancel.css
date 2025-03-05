@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-family: "Manrope", sans-serif;
+  }
+
+  
+  body {
+    max-width: 100%;
+    max-height: 100vh ;
+    background-color: #EFEBE1;
+    color: #333;
+  }
+  
+  nav {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+    padding-left: 100px;
+    padding-right: 40px;
+    justify-content: space-between;
+  }
+  .logobrand {
+    justify-content: flex-start;
+    margin-top: 30px;
+    
+  }
+  h1{
+    font-family: "Marvel", serif;
+    font-weight:bold;
+    color: #000000;
+  }
+  
+  .container {
+    height: 90px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  .tabmenu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .queue-details ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .tabmenu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .tabmenu li a:hover {
+    color: #007bff;
+  } 
+  .textB {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EFEBE1;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+   .logog {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blockbackg {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .queue-card{
+    background-color: #fff;
+    padding: 0px 60px 0px 60px;
+    border-radius: 10px;
+    width: 767px;
+    height: 424px;
+  }
+  .queue-details{
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+  }
+  .queue-details ul {
+    list-style-type: disc;
+    font-family: Arial, sans-serif;
+    width: 140px;
+    height: 124px;
+    margin-top: 50px;
+  }
+  .queue-details ul li {
+    font-size: medium;
+}
+.cancel-button{
+    width: 670px;
+    height: 41px;
+    background-color: #FF3D3D;
+    color: #fff;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+    border: black solid;
+    cursor: pointer;
+    
+    margin-top: 150px;
+}

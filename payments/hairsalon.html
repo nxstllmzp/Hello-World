@@ -41,6 +41,11 @@
         </ul>
         <img class="qr-code" src="/payments/ดาวน์โหลด (4) 1 (1).svg" alt="QR Code">
         <br>
+        <div class="upload-container">
+            <form action="/payments/upload_slip" method="post" enctype="multipart/form-data">
+                <input type="file" name="payment_slip" accept="image/*">
+            </form>
+        </div>
         <a href="/payments/thankyou.html">
             <button class="pay-btn">ชำระเงินเรียบร้อย</button>
         </a>

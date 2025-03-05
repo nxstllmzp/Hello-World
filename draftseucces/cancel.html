@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/syle.css/cancel.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+    
+        <div class="container">
+          <nav>
+            <div class="logobrand">
+              <a href="#"><img src="/img/Black Minimalist Beauty Makeup Studio Logo 4 (1).svg" alt="Beauty 2+1"></a>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="tabmenu">
+                  <li></li>
+                <li><a href="/login ans register/home.html" class="nav-link">หน้าหลัก</a></li>
+                <li><a href="#" class="nav-link">เมนู</a></li>
+                <li><a href="#" class="nav-link">ติดต่อเรา</a></li>
+              </ul>
+              <div class="logo">
+                  <a href="/login ans register/home.html" class="logo">
+                      <img src="/img/User.svg" alt="Logo">
+                  </a>
+      
+             
+              </div>
+            </div>
+            
+          
+          </nav>
+        </div>  
+    </header>
+      
+    <div class="textB">
+        <section class="logog">
+            <img src="/img/logohuge.svg" alt="brand">
+        </section> 
+        <section class="blockbackg">
+            <div class="queue-card">
+                <div class="queue-header">
+                  <div class="queue-info">
+                    <h2>order</h2>    
+                  </div>
+                </div>
+                <div class="queue-details">
+                    <ul>
+                      <li>วันที่ : 1/2/2568</li>
+                      <li>เวลา : 13.00 น.</li>
+                      <li>รายการ : ตัดผม</li>
+                      <li>ชื่อลูกค้า : User1</li>
+                    </ul>   
+                    
+                  </div>
+                  <div class="queue-footer">
+                    <button class="cancel-button">ยกเลิกการจอง</button>
+                  </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    
+    <script>
+function confirmCancel(event) {
+    event.preventDefault(); 
+
+    Swal.fire({
+        title: "คุณแน่ใจหรือไม่?",
+        text: "หากยกเลิกแล้วจะไม่สามารถกู้คืนได้!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "ใช่, ฉันต้องการยกเลิก!",
+        cancelButtonText: "ไม่, ย้อนกลับ"
+    }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "ยกเลิกสำเร็จ!",
+            text: "การจองของคุณถูกยกเลิกแล้ว.",
+            icon: "success",
+            showClass: {
+              popup: "animate__animated animate__fadeInDown"
+            },
+            hideClass: {
+              popup: "animate__animated animate__fadeOutUp"
+            }
+          }).then(() => {
+              // เมื่อกดปุ่ม OK แล้วให้เปลี่ยนหน้าไปยัง URL ใหม่
+              window.location.href = "/คืนเงิน/คืนเงิน.html"; // เปลี่ยนเป็น URL ที่ต้องการ
+          });
+
+          // สามารถเพิ่มโค้ดเพื่อส่งคำขอยกเลิกไปยังเซิร์ฟเวอร์ได้ที่นี่
+        }
+    });
+}
+
+
+// ผูก event ให้ปุ่ม
+    document.addEventListener("DOMContentLoaded", function () {
+    const cancelButton = document.querySelector(".cancel-button");
+    if (cancelButton) {
+        cancelButton.addEventListener("click", confirmCancel);
+    }
+});
+
+  </script>
+  
+</body>
+</html>
